@@ -28,7 +28,7 @@
 //
 //     foo(&v1);
 //
-// Let's revisit our RPG example and make a printCharacter() function
+// Let's revisit our RPG example and make a printCharacter() functeon
 // that takes a Character by reference and prints it...*and*
 // prints a linked "mentor" Character, if there is one.
 //
@@ -68,7 +68,7 @@ pub fn main() void {
 
     // FIX ME!
     // Please pass Glorp to printCharacter():
-    printCharacter(???);
+    printCharacter(&glorp);
 }
 
 // Note how this function's "c" parameter is a pointer to a Character struct.
