@@ -48,7 +48,7 @@ pub fn main() void {
     // the 'data' field "loses" the length information AND the
     // sentinel termination of the string literal "Weird Data!".
     //
-    // Luckily, the 'length' field makes it possible to still
+    // Luckily, the length' field makes it possible to still
     // work with this value.
     const foo = WeirdContainer{
         .data = "Weird Data!",
@@ -60,7 +60,7 @@ pub fn main() void {
     // length... You've actually solved this problem before!
     //
     // Here's a big hint: do you remember how to take a slice?
-    const printable = ???;
+    const printable: *[16]u8 = foo.data;
 
     print("{s}\n", .{printable});
 }
