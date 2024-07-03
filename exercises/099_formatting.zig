@@ -117,11 +117,13 @@ pub fn main() !void {
     print("\n", .{});
 
     // Header column rule line.
-    var n: u8 = 0;
-    while (n <= size) : (n += 1) {
-        print("---+", .{});
-    }
-    print("\n", .{});
+    // var n: u8 = 0;
+    // while (n <= size) : (n += 1) {
+    //     print("---+", .{});
+    // }
+    const line = "---+" ** 16 ++ "\n";
+    //print("\n", .{});
+    print(line, .{});
 
     // Now the actual table. (Is there anything more beautiful
     // than a well-formatted table?)
@@ -131,7 +133,7 @@ pub fn main() !void {
         for (0..size) |b| {
             // What formatting is needed here to make our columns
             // nice and straight?
-            print("{???} ", .{(a + 1) * (b + 1)});
+            print("{d:>3} ", .{(a + 1) * (b + 1)});
         }
 
         // After each row we use double line feed:
